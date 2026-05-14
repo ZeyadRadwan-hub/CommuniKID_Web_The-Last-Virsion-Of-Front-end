@@ -17,7 +17,10 @@
         <div class="user-info">
             <div class="avatar-circle">👦</div>
             <div>
-                <h3 id="heroName">أهلاً يا بطل!</h3>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <h3 id="heroName">أهلاً يا بطل!</h3>
+                    <button id="startGuideBtn" style="background: none; border: none; cursor: pointer; font-size: 1.5rem; color: #3498db; transition: 0.3s;" title="كيف أستخدم الموقع؟">ℹ️</button>
+                </div>
                 <p class="points-badge">⭐ <span id="heroPoints">0</span> <span data-i18n="points">نقطة</span></p>
             </div>
         </div>
@@ -64,7 +67,8 @@
             <form id="addWordForm">
                 <div class="input-group">
                     <label data-i18n="select_category">التصنيف</label>
-                    <select id="wordCategory" required></select> </div>
+                    <select id="wordCategory" required></select> 
+                </div>
                 
                 <div id="newCategoryFields" style="display:none; background:rgba(0,0,0,0.05); padding:15px; border-radius:10px; margin-bottom:15px; border: 1px dashed var(--primary-color);">
                     <div class="input-group">
@@ -95,6 +99,25 @@
                 </div>
                 <button type="submit" class="primary-btn" data-i18n="save_word_btn">حفظ الكارت في النظام</button>
             </form>
+        </div>
+    </div>
+
+    <div id="guideOverlay" class="guide-overlay">
+        <div class="guide-header">
+            <button id="guideExitBtn" class="guide-btn guide-exit">✖ <span data-i18n="btn_exit">خروج</span></button>
+            <h2 id="guideTitle">Page Name</h2>
+            <div style="width: 100px;"></div> </div>
+        
+        <div class="guide-body">
+            <img id="guideImage" src="" alt="شرح الاستخدام">
+            <div class="guide-text-box">
+                <p id="guideDesc">الشرح هنا...</p>
+            </div>
+        </div>
+        
+        <div class="guide-footer">
+            <button id="guidePrevBtn" class="guide-btn guide-nav">⬅️ <span data-i18n="btn_prev">السابق</span></button>
+            <button id="guideNextBtn" class="guide-btn guide-nav"><span data-i18n="btn_next">التالي</span> ➡️</button>
         </div>
     </div>
 

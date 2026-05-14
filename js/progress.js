@@ -4,11 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const points = user.points || 0;
     const words = user.wordsSpoken || 0; 
+    // 👇 التعديل هنا: جلب عدد أيام الدخول المتتالية
+    const streak = user.streakDays || 1; 
 
     const totalPointsEl = document.getElementById('totalPoints');
     const totalWordsEl = document.getElementById('totalWords');
+    // 👇 التعديل هنا: مسكنا الـ h2 بتاع الأيام
+    const streakEl = document.getElementById('realStreakValue'); 
+
     if(totalPointsEl) totalPointsEl.textContent = points;
     if(totalWordsEl) totalWordsEl.textContent = words;
+    // 👇 التعديل هنا: وضعنا الرقم الحقيقي
+    if(streakEl) streakEl.textContent = streak; 
 
     // ==========================================
     // 1. رسم الرسم البياني (Chart.js)
@@ -103,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         let pText = `Hello! This week, your child spoke <strong>${words} words</strong> and earned <strong>${points} points</strong>. 🌟<br><br>`;
         pText += `📊 <strong>Speech Improvement:</strong> Increased by <span style="color:#27ae60; font-weight:bold;">${improvement}%</span> compared to last month.<br>`;
-        pText += `🗣️ Natural Communication: Reached ${normalcy}%</span> matching their age group.<br>`;
+        pText += `🗣️ Natural Communication: Reached <span style="color:#2980b9; font-weight:bold;">${normalcy}%</span> matching their age group.<br>`;
         pText += `<br><strong>💡 Family Tip:</strong> Keep encouraging them, and focus on the 'Feelings' category this week.`;
         if(parentReport) parentReport.innerHTML = pText;
 

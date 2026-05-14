@@ -3,7 +3,7 @@
 ========================================= */
 .market-wrapper {
     display: grid;
-    grid-template-columns: 1fr 450px; 
+    grid-template-columns: 1fr 450px;
     gap: 20px;
     max-width: 1400px;
     margin: 20px auto;
@@ -15,9 +15,9 @@
     background: var(--card-bg);
     border-radius: 20px;
     padding: 20px;
-    overflow-y: auto; 
+    overflow-y: auto;
     border: 1px solid var(--border-color);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .shop-grid {
@@ -37,14 +37,28 @@
     transition: 0.3s;
 }
 
-.shop-item:hover { 
-    border-color: var(--primary-color); 
-    transform: scale(1.02); 
+.shop-item:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.02);
 }
 
-.item-icon { font-size: 3rem; margin-bottom: 10px; }
-.item-color { width: 40px; height: 40px; border-radius: 8px; margin: 0 auto 10px; }
-.item-name { font-weight: bold; color: var(--text-color); margin: 10px 0; }
+.item-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.item-color {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 0 auto 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 10px 0;
+}
 
 .buy-btn {
     background: var(--primary-color);
@@ -56,8 +70,15 @@
     cursor: pointer;
     font-weight: bold;
 }
-.buy-btn.equipped { background: var(--secondary-color); }
-.buy-btn.locked { background: #95a5a6; cursor: not-allowed; }
+
+.buy-btn.equipped {
+    background: var(--secondary-color);
+}
+
+.buy-btn.locked {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
 
 .avatar-side {
     background: var(--card-bg);
@@ -69,7 +90,7 @@
     position: sticky;
     top: 20px;
     border: 2px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
 
@@ -98,16 +119,29 @@
     transition: 0.3s;
 }
 
-.gender-btn:hover { opacity: 1; }
-.gender-btn.active { background: var(--primary-color); color: #fff; opacity: 1; }
-#btnGirl.active { background: #e056fd; } 
+.gender-btn:hover {
+    opacity: 1;
+}
+
+.gender-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    opacity: 1;
+}
+
+#btnGirl.active {
+    background: #e056fd;
+}
 
 #avatar-canvas-container {
     width: 100%;
-    min-height: 400px; 
-    cursor: grab; 
+    min-height: 400px;
+    cursor: grab;
 }
-#avatar-canvas-container:active { cursor: grabbing; }
+
+#avatar-canvas-container:active {
+    cursor: grabbing;
+}
 
 .points-display {
     margin-top: 10px;
@@ -127,15 +161,18 @@
         height: auto;
         overflow: visible;
         display: flex;
-        flex-direction: column-reverse; /* اللبس تحت والشخصية فوق */
+        flex-direction: column-reverse;
+        /* اللبس تحت والشخصية فوق */
     }
+
     .avatar-side {
         position: relative;
         top: 0;
         height: auto;
         padding-bottom: 20px;
-        order: -1; 
+        order: -1;
     }
+
     .shop-side {
         height: auto;
         overflow-y: visible;
@@ -143,7 +180,17 @@
 }
 
 @media screen and (max-width: 480px) {
-    .shop-grid { grid-template-columns: repeat(2, 1fr); }
-    .gender-btn { padding: 8px 10px; font-size: 0.9rem; }
-    .points-display { font-size: 1.4rem; padding: 8px 20px; }
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gender-btn {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .points-display {
+        font-size: 1.4rem;
+        padding: 8px 20px;
+    }
 }
