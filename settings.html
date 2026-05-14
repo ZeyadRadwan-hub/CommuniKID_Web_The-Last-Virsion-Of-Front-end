@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإعدادات | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body settings-page">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <header class="settings-header" style="margin-top: 40px;">
+        <h1><span data-i18n="settings_title">إعدادات العظمة ✨⚙️</span><br><span style="font-size: 0.9rem; font-weight: normal; opacity: 0.7;" data-i18n="settings_sub">إدارة حسابك الشخصي وبيانات الأبطال</span></h1>
+        <a href="parent-home.html" class="control-btn" style="text-decoration: none;" data-i18n="back">⬅️ رجوع</a>
+    </header>
+
+    <div class="settings-layout">
+        <div class="settings-grid">
+            <div class="setting-card" onclick="window.location.href='hero-data.html'">
+                <div class="icon-glow">👤</div>
+                <h3 data-i18n="card_hero">بيانات البطل</h3>
+                <p data-i18n="desc_hero">تحرير اسم، عمر، وحالة طفلك الصحية</p>
+            </div>
+            <div class="setting-card" onclick="window.location.href='notifications.html'">
+                <div class="icon-glow" style="box-shadow: 0 0 15px rgba(231, 76, 60, 0.2);">🔔</div>
+                <h3 data-i18n="card_notify">نظام التنبيهات</h3>
+                <p data-i18n="desc_notify">إدارة إشعارات الجلسات والتقدم اليومي</p>
+            </div>
+            <div class="setting-card" onclick="window.location.href='privacy.html'">
+                <div class="icon-glow" style="box-shadow: 0 0 15px rgba(46, 204, 113, 0.2);">🛡️</div>
+                <h3 data-i18n="card_privacy">الخصوصية والأمان</h3>
+                <p data-i18n="desc_privacy">حماية حسابك وتغيير كلمة المرور السرية</p>
+            </div>
+            <div class="setting-card" onclick="window.location.href='favorites.html'">
+                <div class="icon-glow" style="box-shadow: 0 0 15px rgba(155, 89, 182, 0.2);">❤️</div>
+                <h3 data-i18n="card_fav">المفضلة</h3>
+                <p data-i18n="desc_fav">الوصول السريع للكلمات التي يحبها بطلنا</p>
+            </div>
+            <div class="setting-card" onclick="window.location.href='achievements.html'">
+                <div class="icon-glow" style="box-shadow: 0 0 15px rgba(241, 196, 15, 0.2);">🏅</div>
+                <h3 data-i18n="card_achieve">الإنجازات</h3>
+                <p data-i18n="desc_achieve">استعراض كل الأوسمة التي حصل عليها البطل</p>
+            </div>
+            <div class="setting-card" onclick="window.location.href='premium.html'">
+                <div class="icon-glow" style="box-shadow: 0 0 15px rgba(52, 152, 219, 0.2);">💳</div>
+                <h3 data-i18n="card_premium">الاشتراك المميز</h3>
+                <p data-i18n="desc_premium">إدارة خطة الدفع والوصول للمحتوى الحصري</p>
+            </div>
+        </div>
+
+        <aside class="profile-column">
+            <div class="profile-card">
+                <div class="profile-avatar">👨‍👦</div>
+                <h2 id="settingsUserName" style="margin: 0; color: var(--text-color);">جاري التحميل...</h2>
+                <div class="hero-tag">ولي أمر بطلنا</div>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <h3 id="settingsUserPoints">0</h3>
+                        <p data-i18n="power_points">نقطة قوة</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>12</h3>
+                        <p data-i18n="days_streak">يوم متواصل</p>
+                    </div>
+                </div>
+                <button class="edit-profile-btn" data-i18n="edit_profile" onclick="window.location.href='hero-data.html'">تعديل الملف الشخصي ✏️</button>
+            </div>
+            <div class="logout-card">
+                <button class="logout-btn" id="safeLogoutBtn">
+                    <span data-i18n="logout_safe">تسجيل الخروج الآمن</span> <span>🚪</span>
+                </button>
+            </div>
+        </aside>
+    </div>
+    <script src="js/global.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) return;
+            document.getElementById('settingsUserName').textContent = currentUser.name || 'أحمد المحمدي';
+            document.getElementById('settingsUserPoints').textContent = currentUser.points || 0;
+            const safeLogoutBtn = document.getElementById('safeLogoutBtn');
+            if(safeLogoutBtn) {
+                safeLogoutBtn.addEventListener('click', () => {
+                    if(confirm('هل أنت متأكد من تسجيل الخروج الآمن؟')) {
+                        localStorage.removeItem('currentUser');
+                        window.location.href = 'login.html';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

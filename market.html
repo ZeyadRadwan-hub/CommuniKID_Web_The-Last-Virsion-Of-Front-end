@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الأبطال | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/market.css">
+</head>
+<body class="app-body market-page" style="overflow-x: hidden;">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <header class="app-navbar" style="max-width: 1400px; margin: 60px auto 20px;">
+        <a href="parent-home.html" class="control-btn" style="text-decoration: none;" data-i18n="home_back">⬅️ العودة للرئيسية</a>
+        <h2 style="color: var(--text-color);" data-i18n="market_title">خزانة ملابس البطل 🦸‍♂️</h2>
+    </header>
+
+    <div class="market-wrapper">
+        <main class="shop-side">
+            <h3 class="shop-category-title" data-i18n="shirts" style="color: var(--text-color);">التيشيرتات 👕</h3>
+            <div class="shop-grid" id="shirtsGrid"></div>
+
+            <h3 class="shop-category-title" data-i18n="hats" style="color: var(--text-color); margin-top: 20px;">القبعات 👑</h3>
+            <div class="shop-grid" id="hatsGrid"></div>
+
+            <h3 class="shop-category-title" data-i18n="glasses" style="color: var(--text-color); margin-top: 20px;">النظارات 😎</h3>
+            <div class="shop-grid" id="facesGrid"></div>
+        </main>
+
+        <aside class="avatar-side">
+            <div class="gender-toggle">
+                <button id="btnBoy" class="gender-btn active" onclick="setGender('boy')">👦 <span data-i18n="gender_male">ولد</span></button>
+                <button id="btnGirl" class="gender-btn" onclick="setGender('girl')">👧 <span data-i18n="gender_female">بنت</span></button>
+            </div>
+
+            <div id="avatar-canvas-container"></div>
+            
+            <div class="points-display"><span data-i18n="balance">⭐ رصيدك:</span> <span id="marketPoints">0</span></div>
+            <p style="color: var(--text-color); margin-top: 15px; font-size: 0.9rem; opacity: 0.7;" data-i18n="rotate_hint">(اسحب الشخصية بالماوس عشان تلفها! 🔄)</p>
+        </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/avatar3d.js"></script> 
+    <script src="js/market.js"></script>
+</body>
+</html>

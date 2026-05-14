@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعدادات الحساب | CommuniKID Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/therapist.css">
+</head>
+<body class="app-body">
+
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <nav class="therapist-navbar">
+        <div style="color: #fff; font-size: 1.5rem; font-weight: bold;">CommuniKID <span style="color: #3498db;">Pro</span></div>
+        <div class="nav-links">
+            <a href="therapist-home.html">الرئيسية</a>
+            <a href="therapist-patients.html">مرضاي</a>
+            <a href="therapist-tasks.html">المهام</a>
+            <a href="therapist-chat.html">الرسائل</a>
+            <a href="therapist-appointments.html">المواعيد</a>
+            <a href="therapist-settings.html" class="active">الإعدادات</a> 
+        </div>
+        <button id="logoutBtn" class="danger-btn">خروج 🚪</button>
+    </nav>
+
+    <main class="main-content" style="max-width: 800px;">
+        <header style="margin-bottom: 30px;">
+            <h1>إعدادات الحساب الشخصي ⚙️</h1>
+            <p>تحديث بياناتك المهنية وكلمة المرور</p>
+        </header>
+
+        <div class="auth-box" style="width: 100%; max-width: none;">
+            <div class="input-group" style="background: var(--bg-color); padding: 20px; border-radius: 10px; margin-bottom: 25px; border: 2px dashed #3498db;">
+                <label style="color: #3498db; font-weight: bold; font-size: 1.1rem;">🔑 كود الأخصائي الخاص بك</label>
+                <p style="font-size: 0.85rem; color: #888; margin-bottom: 10px;">أرسل هذا الكود لأولياء الأمور لربط حساباتهم بك لتتمكن من إرسال المهام والمواعيد لهم.</p>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="docCodeDisplay" disabled style="opacity: 1; background: var(--card-bg); font-weight: bold; font-size: 1.2rem; text-align: center; color: var(--text-color); cursor: default;">
+                    <button type="button" id="copyCodeBtn" class="action-btn" style="background: #3498db; color: white; width: 120px; font-weight: bold;">نسخ الكود</button>
+                </div>
+            </div>
+
+            <form id="doctorSettingsForm">
+                <div class="input-group">
+                    <label>الاسم المهني</label>
+                    <input type="text" id="docName" required>
+                </div>
+                <div class="input-group">
+                    <label>التخصص</label>
+                    <input type="text" id="docSpecialty" required>
+                </div>
+                <div class="input-group">
+                    <label>البريد الإلكتروني (لا يمكن تغييره)</label>
+                    <input type="email" id="docEmail" disabled style="opacity: 0.6; cursor: not-allowed;">
+                </div>
+                <hr style="margin: 20px 0; border: 0; border-top: 1px dashed var(--border-color);">
+                <div class="input-group">
+                    <label>كلمة المرور الجديدة (اتركها فارغة إذا لم ترد التغيير)</label>
+                    <input type="password" id="docPass">
+                </div>
+                <button type="submit" class="primary-btn">حفظ التغييرات ✅</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/therapist-settings.js"></script>
+</body>
+</html>

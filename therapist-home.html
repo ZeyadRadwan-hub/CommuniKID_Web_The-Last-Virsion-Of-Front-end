@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الأخصائي | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/therapist.css">
+</head>
+<body class="app-body">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <nav class="therapist-navbar">
+        <div style="color: #fff; font-size: 1.5rem; font-weight: bold;">CommuniKID <span style="color: #3498db;">Pro</span></div>
+        <div class="nav-links">
+            <a href="therapist-home.html" class="active" data-i18n="nav_home">الرئيسية</a>
+            <a href="therapist-patients.html" data-i18n="nav_patients">مرضاي</a>
+            <a href="therapist-tasks.html" data-i18n="nav_tasks">المهام</a>
+            <a href="therapist-chat.html" data-i18n="nav_messages">الرسائل</a>
+            <a href="therapist-appointments.html" data-i18n="nav_appointments">المواعيد</a>
+            <a href="therapist-settings.html" data-i18n="settings">الإعدادات</a> 
+        </div>
+        <button id="logoutBtn" class="danger-btn" data-i18n="logout">تسجيل الخروج 🚪</button>
+    </nav>
+
+    <main class="main-content" style="max-width: 1200px;">
+        <header style="margin-bottom: 30px;">
+            <h1 style="color: var(--text-color);"><span data-i18n="therapist_welcome">أهلاً د.</span> <span id="doctorName">جاري التحميل...</span> 👨‍⚕️</h1>
+            <p style="color: #888;" data-i18n="therapist_sub">إليك ملخص سريع لنشاط عيادتك اليوم.</p>
+        </header>
+
+        <div class="dashboard-stats">
+            <div class="d-stat-card">
+                <div class="d-stat-icon">👥</div>
+                <div class="d-stat-info">
+                    <h3 id="statPatients">0</h3>
+                    <p data-i18n="total_cases">إجمالي الحالات</p>
+                </div>
+            </div>
+            <div class="d-stat-card" style="border-color: #2ecc71;">
+                <div class="d-stat-icon" style="color: #2ecc71; background: rgba(46, 204, 113, 0.1);">📅</div>
+                <div class="d-stat-info">
+                    <h3 id="statSessions">0</h3>
+                    <p data-i18n="today_sessions">جلسات اليوم</p>
+                </div>
+            </div>
+            <div class="d-stat-card" style="border-color: #e74c3c;">
+                <div class="d-stat-icon" style="color: #e74c3c; background: rgba(231, 76, 60, 0.1);">💬</div>
+                <div class="d-stat-info">
+                    <h3 id="statMessages">0</h3>
+                    <p data-i18n="unread_msgs">رسائل غير مقروءة</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-sections">
+            <div class="d-panel">
+                <h2 data-i18n="latest_activity">أحدث نشاط للأبطال 📈</h2>
+                <table class="d-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="hero_name_th">اسم البطل</th>
+                            <th data-i18n="earned_points">النقاط المكتسبة</th>
+                            <th data-i18n="completed_tasks">المهام المنجزة</th>
+                            <th data-i18n="improvement_index">مؤشر التحسن</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentActivityTable"></tbody>
+                </table>
+                <button class="primary-btn" style="width: auto; margin-top: 20px;" onclick="window.location.href='therapist-patients.html'" data-i18n="view_all_cases">عرض كل الحالات</button>
+            </div>
+
+            <div class="d-panel">
+                <h2 data-i18n="today_sessions">جلسات اليوم 🕒</h2>
+                <div id="todaySessionsList" style="display: flex; flex-direction: column; gap: 15px;"></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/global.js"></script>
+    <script src="js/therapist-home.js"></script>
+</body>
+</html>

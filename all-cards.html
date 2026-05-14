@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كل الكروت | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <header class="app-navbar" style="justify-content: flex-start; gap: 20px;">
+        <a href="parent-home.html" class="action-btn clear-btn" style="text-decoration: none;" id="backBtn" data-i18n="home_back">⬅️ رجوع</a>
+        <h2 style="color: var(--secondary-color);" data-i18n="all_cards_title">جميع الكلمات والجمل 🗂️</h2>
+    </header>
+
+    <main class="main-content">
+        <section class="sentence-builder">
+            <div class="sentence-box" id="sentenceBox">
+                <p class="placeholder-text" id="sentencePlaceholder" data-i18n="sentence_placeholder">اضغط على الكروت لتكوين جملة...</p>
+            </div>
+            <div class="sentence-actions">
+                <button class="action-btn play-btn" id="playSentenceBtn" data-i18n="play_btn">🔊 انطق الجملة</button>
+                <button class="action-btn mic-btn" id="micSentenceBtn" data-i18n="mic_btn">🎤 جرب بصوتك</button>
+                <button class="action-btn" id="favSentenceBtn" style="background-color: #e74c3c; color: white;">❤️ حفظ الجملة</button>
+                <button class="action-btn clear-btn" id="clearSentenceBtn" data-i18n="clear_btn">🗑️ مسح</button>
+            </div>
+        </section>
+
+        <div class="categories-grid" id="allWordsGrid"></div>
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/data.js"></script> 
+    <script src="js/sentence.js"></script> 
+    <script src="js/all-cards.js"></script>
+</body>
+</html>

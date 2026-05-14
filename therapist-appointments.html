@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المواعيد | CommuniKID Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/therapist.css">
+    <link rel="stylesheet" href="css/therapist-appointments.css">
+</head>
+<body class="app-body">
+
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <nav class="therapist-navbar">
+        <div style="color: #fff; font-size: 1.5rem; font-weight: bold;">CommuniKID <span style="color: #3498db;">Pro</span></div>
+        <div class="nav-links">
+            <a href="therapist-home.html" data-i18n="nav_home">الرئيسية</a>
+            <a href="therapist-patients.html" data-i18n="nav_patients">مرضاي</a>
+            <a href="therapist-tasks.html" data-i18n="nav_tasks">المهام</a>
+            <a href="therapist-chat.html" data-i18n="nav_messages">الرسائل</a>
+            <a href="therapist-appointments.html" class="active" data-i18n="nav_appointments">المواعيد</a>
+            <a href="therapist-settings.html" data-i18n="settings">الإعدادات</a>
+        </div>
+        <button id="logoutBtn" class="danger-btn" data-i18n="logout">خروج 🚪</button>
+    </nav>
+
+    <main class="main-content" style="max-width: 1100px;">
+        <header class="appointments-header">
+            <h1 data-i18n="appointments_agenda">أجندة المواعيد 📅</h1>
+            <button class="primary-btn" style="width: auto;" id="openModalBtn" data-i18n="book_appointment">➕ حجز موعد جديد</button>
+        </header>
+
+        <div class="calendar-layout">
+            <section class="appointments-list">
+                <h2 style="margin-bottom: 20px; color: var(--text-color);" data-i18n="upcoming_sessions">الجلسات القادمة</h2>
+                <div id="appointmentsContainer">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle" data-i18n="book_appointment">حجز جلسة جديدة ✨</h2>
+            <form id="addAppointmentForm">
+                <div class="input-group">
+                    <label data-i18n="hero_name_th">اسم البطل</label>
+                    <select id="patientName" required>
+                        <option value="" disabled selected>جاري تحميل الأبطال...</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label data-i18n="date_label">التاريخ</label>
+                    <input type="date" id="appDate" required>
+                </div>
+                <div class="input-group">
+                    <label data-i18n="time_label">الوقت</label>
+                    <input type="time" id="appTime" required>
+                </div>
+                <div class="input-group">
+                    <label data-i18n="session_type">نوع الجلسة</label>
+                    <select id="appType">
+                        <option value="في العيادة 🏥" data-i18n="in_clinic">في العيادة 🏥</option>
+                        <option value="أونلاين 💻" data-i18n="online_session">أونلاين 💻</option>
+                    </select>
+                </div>
+                <button type="submit" class="primary-btn" data-i18n="confirm_booking">تأكيد الحجز ✅</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/therapist-appointments.js"></script>
+</body>
+</html>

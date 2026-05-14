@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاشتراك المميز | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings-pages.css">
+    <style>
+        .plans-container { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+        .premium-card { flex: 1; min-width: 280px; }
+        .plan-basic { background: linear-gradient(135deg, #3498db, #2980b9); box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3); }
+        .plan-pro { transform: scale(1.05); border: 2px solid #fff;}
+        .plan-basic .premium-btn { background: #fff; color: #2980b9; }
+    </style>
+</head>
+<body class="app-body settings-page">
+    <div class="global-controls"><button id="themeToggle" class="control-btn">🌙</button><button id="langToggle" class="control-btn">EN</button></div>
+    <header class="settings-header" style="margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h1><span data-i18n="premium_title">الاشتراك المميز 💳</span><br><span style="font-size: 0.9rem; font-weight: normal; opacity: 0.7;" data-i18n="premium_sub">ارتقِ بمستوى بطلنا</span></h1>
+        <a href="settings.html" class="control-btn" style="text-decoration: none;" data-i18n="back">⬅️ رجوع</a>
+    </header>
+    
+    <div class="auth-container" style="margin: 0 auto; max-width: 800px; padding: 20px;">
+        <div class="plans-container">
+            
+            <div class="premium-card plan-basic">
+                <h2 data-i18n="plan_basic_title">CommuniKID Basic 🥉</h2>
+                <p data-i18n="plan_basic_desc">تجربة خالية من الإعلانات</p>
+                <ul>
+                    <li data-i18n="feat_basic_1">✔️ إزالة جميع الإعلانات المزعجة</li>
+                    <li data-i18n="feat_basic_2">✔️ سرعة أعلى في تحميل الكلمات</li>
+                    <li data-i18n="feat_basic_3">✔️ دعم فني أسرع</li>
+                </ul>
+                <button id="upgradeBasicBtn" class="premium-btn" data-i18n="btn_basic_price">اشترك الآن بـ 4.99$ / شهر</button>
+            </div>
+
+            <div class="premium-card plan-pro">
+                <h2 data-i18n="premium_pro_title">CommuniKID Pro ✨</h2>
+                <p data-i18n="premium_unlock">افتح كل المميزات والكلمات الجديدة</p>
+                <ul>
+                    <li data-i18n="premium_feat1">✔️ تقييم النطق بالذكاء الاصطناعي</li>
+                    <li data-i18n="premium_feat2">✔️ ملابس حصرية 3D في الماركت</li>
+                    <li data-i18n="premium_feat3">✔️ تقارير تفصيلية تطبع للأخصائي</li>
+                    <li data-i18n="premium_feat4">✔️ جميع مميزات الباقة الأساسية</li>
+                </ul>
+                <button id="upgradeProBtn" class="premium-btn" data-i18n="subscribe_btn">اشترك الآن بـ 9.99$ / شهر</button>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="js/global.js"></script>
+    <script src="js/premium.js"></script>
+</body>
+</html>

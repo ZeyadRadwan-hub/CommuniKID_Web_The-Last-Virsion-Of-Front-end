@@ -1,0 +1,65 @@
+.appointments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.calendar-layout {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.appointment-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    border-right: 5px solid #3498db;
+}
+
+[dir="ltr"] .appointment-card { border-right: none; border-left: 5px solid #3498db; }
+
+.appointment-card:hover { transform: scale(1.01); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+.app-info h3 { margin: 0 0 5px 0; color: var(--text-color); }
+.app-info p { margin: 0; color: #888; font-size: 0.9rem; display: flex; gap: 15px; flex-wrap: wrap; }
+
+.app-type-tag {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.app-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.edit-app {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.edit-app:hover { background: #2980b9; }
+
+.delete-app { background: none; border: none; color: #e74c3c; cursor: pointer; font-size: 1.2rem; transition: 0.3s; }
+.delete-app:hover { transform: scale(1.2); }

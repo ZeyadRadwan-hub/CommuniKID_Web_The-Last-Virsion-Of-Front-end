@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المرضى | CommuniKID Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/therapist.css">
+    <link rel="stylesheet" href="css/therapist-patients.css">
+</head>
+<body class="app-body">
+
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <nav class="therapist-navbar">
+        <div style="color: #fff; font-size: 1.5rem; font-weight: bold;">CommuniKID <span style="color: #3498db;">Pro</span></div>
+        <div class="nav-links">
+            <a href="therapist-home.html">الرئيسية</a>
+            <a href="therapist-patients.html" class="active">مرضاي</a>
+            <a href="therapist-tasks.html">المهام</a>
+            <a href="therapist-chat.html">الرسائل</a>
+            <a href="therapist-appointments.html">المواعيد</a>
+            <a href="therapist-settings.html">الإعدادات</a>
+        </div>
+        <button id="logoutBtn" class="danger-btn">خروج 🚪</button>
+    </nav>
+
+    <main class="main-content" style="max-width: 1200px;">
+        <header class="patients-header">
+            <div>
+                <h1>قائمة الأبطال 👦👧</h1>
+                <p>متابعة أداء الأطفال وإدارة ملفاتهم الطبية</p>
+            </div>
+            <button class="primary-btn" style="width: auto;" id="openAddPatientModalBtn">➕ إضافة بطل جديد</button>
+        </header>
+
+        <div class="patients-grid" id="patientsGrid">
+        </div>
+    </main>
+
+    <div id="addPatientModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closePatientModal">&times;</span>
+            <h2>إضافة بطل جديد 🦸‍♂️</h2>
+            <p style="color: #888; font-size: 0.9rem; margin-bottom: 15px;">سيتم إنشاء حساب للمريض وربطه بكودك تلقائياً.</p>
+            <form id="addPatientForm">
+                <div class="input-group">
+                    <label>اسم البطل</label>
+                    <input type="text" id="newPatName" required>
+                </div>
+                <div class="input-group">
+                    <label>البريد الإلكتروني (للدخول)</label>
+                    <input type="email" id="newPatEmail" required>
+                </div>
+                <div class="input-group">
+                    <label>كلمة المرور المؤقتة</label>
+                    <input type="password" id="newPatPass" required>
+                </div>
+                <div class="input-group">
+                    <label>سن الطفل</label>
+                    <input type="number" id="newPatAge" required>
+                </div>
+                <div class="input-group">
+                    <label>الحالة</label>
+                    <select id="newPatCond" required>
+                        <option value="speech_delay">تأخر في النطق</option>
+                        <option value="autism">طيف توحد</option>
+                        <option value="down_syndrome">متلازمة داون</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>النوع</label>
+                    <select id="newPatGender" required>
+                        <option value="male">ذكر</option>
+                        <option value="female">أنثى</option>
+                    </select>
+                </div>
+                <button type="submit" class="primary-btn">إنشاء الحساب وربطه ✅</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/therapist-patients.js"></script>
+</body>
+</html>

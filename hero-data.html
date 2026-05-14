@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات البطل | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body settings-page">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <header class="settings-header" style="margin-top: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <h1><span data-i18n="card_hero">بيانات البطل 👤</span><br><span style="font-size: 0.9rem; font-weight: normal; opacity: 0.7;" data-i18n="desc_hero">تحرير اسم، عمر، وحالة طفلك الصحية</span></h1>
+        <a href="settings.html" class="control-btn" style="text-decoration: none;" data-i18n="back">⬅️ رجوع</a>
+    </header>
+
+    <div class="auth-container" style="margin: 0 auto;">
+        <div class="auth-box">
+            <form id="heroDataForm">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <div id="profileImagePreview" style="width: 100px; height: 100px; border-radius: 50%; background-color: var(--bg-color); border: 3px solid var(--primary-color); display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 3rem; overflow: hidden; background-size: cover; background-position: center;">👦</div>
+                    <label for="profileImageInput" style="cursor: pointer; background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--text-color);">📷 تغيير الصورة</label>
+                    <input type="file" id="profileImageInput" accept="image/*" style="display: none;">
+                </div>
+
+                <div class="input-group">
+                    <label data-i18n="fullname_label">الاسم بالكامل</label>
+                    <input type="text" id="heroNameInput" required>
+                </div>
+                
+                <div class="input-group">
+                    <label data-i18n="child_age_label">عمر البطل (بالسنوات)</label>
+                    <input type="number" id="heroAgeInput" required min="1" max="18">
+                </div>
+
+                <div class="input-group">
+                    <label data-i18n="child_condition_label">حالة البطل</label>
+                    <select id="heroConditionInput" required>
+                        <option value="speech_delay" data-i18n="cond_speech">تأخر في النطق</option>
+                        <option value="autism" data-i18n="cond_autism">طيف توحد</option>
+                        <option value="down_syndrome">متلازمة داون</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                </div>
+                
+                <div class="input-group" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color);">
+                    <label style="color: var(--primary-color);" data-i18n="doctor_code_label">كود الأخصائي المعالج (لربط الحساب)</label>
+                    <input type="text" id="heroDoctorCodeInput" data-i18n-placeholder="doctor_code_placeholder" placeholder="أدخل كود الأخصائي (مثال: ABCD1234@)">
+                </div>
+
+                <button type="submit" class="primary-btn" style="margin-top: 15px;" data-i18n="save_changes">حفظ التعديلات ✅</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/hero-data.js"></script>
+</body>
+</html>

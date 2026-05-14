@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواعيد الجلسات | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/parent-tasks.css"> 
+</head>
+<body class="app-body">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <header class="app-navbar" style="max-width: 900px; margin: 40px auto 20px;">
+        <a href="parent-home.html" class="action-btn clear-btn" style="text-decoration: none;" data-i18n="home_back">⬅️ رجوع للرئيسية</a>
+        <h2 style="color: var(--secondary-color);" data-i18n="parent_appointments_title">مواعيد الجلسات 📅</h2>
+    </header>
+
+    <main class="main-content" style="max-width: 900px;">
+        <div class="tasks-header">
+            <p style="color: #888; font-size: 1.1rem; text-align: center;" data-i18n="parent_appointments_sub">تابع مواعيد جلساتك القادمة مع الأخصائي المعالج.</p>
+        </div>
+
+        <section class="tasks-section" style="margin-top: 20px;">
+            <h2 style="color: var(--text-color); margin-bottom: 20px; border-bottom: 2px dashed var(--border-color); padding-bottom: 10px;" data-i18n="scheduled_sessions">الجلسات المجدولة 🕒</h2>
+            <div id="parentAppointmentsContainer" class="tasks-container">
+                </div>
+        </section>
+    </main>
+    <script src="js/global.js"></script>
+    <script src="js/parent-appointments.js"></script>
+</body>
+</html>

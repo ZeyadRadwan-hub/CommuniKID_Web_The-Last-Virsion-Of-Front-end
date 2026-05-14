@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرسائل | CommuniKID Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/therapist.css">
+    <link rel="stylesheet" href="css/therapist-chat.css">
+</head>
+<body class="app-body">
+
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <nav class="therapist-navbar">
+        <div style="color: #fff; font-size: 1.5rem; font-weight: bold;">CommuniKID <span style="color: #3498db;">Pro</span></div>
+        <div class="nav-links">
+            <a href="therapist-home.html" data-i18n="nav_home">الرئيسية</a>
+            <a href="therapist-patients.html" data-i18n="nav_patients">مرضاي</a>
+            <a href="therapist-tasks.html" data-i18n="nav_tasks">المهام</a>
+            <a href="therapist-chat.html" class="active" data-i18n="nav_messages">الرسائل</a>
+            <a href="therapist-appointments.html" data-i18n="nav_appointments">المواعيد</a>
+        </div>
+        <button id="logoutBtn" class="danger-btn" data-i18n="logout">خروج 🚪</button>
+    </nav>
+
+    <main class="chat-layout">
+        <aside class="chat-sidebar">
+            <div class="sidebar-header"><h2 data-i18n="chats_title">المحادثات 💬</h2></div>
+            <div id="contactsList" class="contacts-list">
+                </div>
+        </aside>
+
+        <section class="chat-main">
+            <div id="chatHeader" class="chat-header">
+                <h3 id="activeContactName">اختر محادثة للبدء</h3>
+            </div>
+            
+            <div id="chatMessages" class="chat-messages">
+                <div class="empty-chat">قم باختيار ولي أمر من القائمة الجانبية لبدء المتابعة</div>
+            </div>
+
+            <form id="chatInputForm" class="chat-input-area" style="display: none;">
+                <input type="text" id="messageInput" data-i18n-placeholder="type_message" placeholder="اكتب رسالتك هنا..." required>
+                <button type="submit" class="send-btn" data-i18n="send_btn">إرسال 🚀</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/therapist-chat.js"></script>
+</body>
+</html>

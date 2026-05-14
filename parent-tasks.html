@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهام البطل | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/parent-tasks.css">
+</head>
+<body class="app-body">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <header class="app-navbar" style="max-width: 900px; margin: 40px auto 20px;">
+        <a href="parent-home.html" class="action-btn clear-btn" style="text-decoration: none;" data-i18n="home_back">⬅️ رجوع للرئيسية</a>
+        <h2 style="color: var(--secondary-color);" data-i18n="hero_tasks_title">مهام البطل 🎯</h2>
+        <div class="points-badge">⭐ <span id="heroPoints">0</span> <span data-i18n="points">نقطة</span></div>
+    </header>
+
+    <main class="main-content" style="max-width: 900px;">
+        <div class="tasks-header">
+            <p style="color: #888; font-size: 1.1rem;" data-i18n="assign_tasks_sub">هنا تجد التدريبات التي أرسلها الأخصائي المعالج للتدريب عليها في المنزل.</p>
+        </div>
+
+        <div id="favLiveCaptionBox" style="margin-bottom: 20px; padding: 15px; border-radius: 10px; display: none; text-align: center; font-size: 1.3rem; font-weight: bold; background: var(--bg-color); border: 2px dashed var(--border-color); color: var(--text-color); transition: 0.3s;"></div>
+
+        <section class="tasks-section">
+            <h2 style="color: var(--text-color); margin-bottom: 20px; border-bottom: 2px dashed var(--border-color); padding-bottom: 10px;" data-i18n="required_tasks">المهام المطلوبة ⏳</h2>
+            <div id="pendingTasksContainer" class="tasks-container"></div>
+        </section>
+
+        <section class="tasks-section" style="margin-top: 40px;">
+            <h2 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px dashed var(--border-color); padding-bottom: 10px;" data-i18n="completed_tasks_sec">المهام المنجزة ✅</h2>
+            <div id="completedTasksContainer" class="tasks-container"></div>
+        </section>
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/parent-tasks.js"></script>
+</body>
+</html>

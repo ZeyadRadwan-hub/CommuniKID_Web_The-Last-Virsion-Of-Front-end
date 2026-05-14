@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <div class="auth-container" style="max-width: 500px;">
+        <div class="auth-box">
+            <div class="logo-container">
+                <h1 data-i18n="welcome_title_signup">انضم لعالمنا 🌟</h1>
+                <p data-i18n="welcome_subtitle_signup">اختر نوع حسابك لنبدأ الرحلة</p>
+            </div>
+
+            <div class="role-selector">
+                <button type="button" id="btnParent" class="role-btn active" data-i18n="role_parent">👨‍👩‍👦 ولي أمر</button>
+                <button type="button" id="btnTherapist" class="role-btn" data-i18n="role_therapist">👨‍⚕️ أخصائي</button>
+            </div>
+
+            <form id="signupForm">
+                <div class="input-group">
+                    <label for="name" data-i18n="fullname_label">الاسم بالكامل</label>
+                    <input type="text" id="name" data-i18n-placeholder="fullname_placeholder" placeholder="أدخل اسمك" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email" data-i18n="email_label">البريد الإلكتروني</label>
+                    <input type="email" id="email" data-i18n-placeholder="email_placeholder" placeholder="أدخل بريدك الإلكتروني" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password" data-i18n="password_label">كلمة المرور</label>
+                    <input type="password" id="password" data-i18n-placeholder="password_placeholder" placeholder="أدخل كلمة المرور" required>
+                </div>
+
+                <div id="parentFields">
+                    <div class="input-group">
+                        <label for="childAge" data-i18n="child_age_label">سن الطفل</label>
+                        <input type="number" id="childAge" data-i18n-placeholder="child_age_placeholder" placeholder="عمر الطفل بالسنوات">
+                    </div>
+                    <div class="input-group">
+                        <label for="childCondition" data-i18n="child_condition_label">حالة البطل</label>
+                        <select id="childCondition" class="form-select">
+                            <option value="speech_delay" data-i18n="cond_speech">تأخر في النطق</option>
+                            <option value="autism" data-i18n="cond_autism">طيف توحد</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="doctorCode" data-i18n="doctor_code_label">كود الأخصائي المعالج (اختياري)</label>
+                        <input type="text" id="doctorCode" data-i18n-placeholder="doctor_code_placeholder" placeholder="أدخل كود الأخصائي لربط الحساب">
+                    </div>
+                </div>
+
+                <div id="therapistFields" style="display: none;">
+                    <div class="input-group">
+                        <label for="specialty" data-i18n="specialty_label">التخصص الدقيق</label>
+                        <input type="text" id="specialty" data-i18n-placeholder="specialty_placeholder" placeholder="مثال: أخصائي تخاطب، تعديل سلوك">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="gender" data-i18n="gender_label">النوع</label>
+                    <select id="gender" class="form-select">
+                        <option value="male" data-i18n="gender_male">ذكر</option>
+                        <option value="female" data-i18n="gender_female">أنثى</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-btn" data-i18n="signup_btn">إنشاء الحساب الآن</button>
+            </form>
+
+            <div class="auth-footer">
+                <p><span data-i18n="have_account">لديك حساب بالفعل؟</span> <a href="login.html" data-i18n="login_link">تسجيل الدخول</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/global.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body">
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <header class="app-navbar">
+        <div class="user-info">
+            <div class="avatar-circle">👦</div>
+            <div>
+                <h3 id="heroName">أهلاً يا بطل!</h3>
+                <p class="points-badge">⭐ <span id="heroPoints">0</span> <span data-i18n="points">نقطة</span></p>
+            </div>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="all-cards.html" class="action-btn" style="text-decoration: none; background-color: #e67e22; color: white;" data-i18n="all_cards_btn">📚 عرض كل الكروت</a>
+            
+            <button id="openAddWordModal" class="action-btn" style="background-color: var(--primary-color); color: white;" data-i18n="add_word">➕ إضافة كارت</button>
+            <a href="market.html" class="action-btn" style="text-decoration: none; background-color: #f1c40f; color: #333;" data-i18n="market">🛒 الماركت</a>
+            <a href="progress.html" class="action-btn" style="text-decoration: none; background-color: #8e44ad; color: white;" data-i18n="reports">📈 التقارير</a>
+            <a href="settings.html" class="action-btn" style="text-decoration: none; background-color: var(--secondary-color); color: white;" data-i18n="settings">⚙️ الإعدادات</a>
+            <button id="logoutBtn" class="danger-btn" data-i18n="logout">تسجيل الخروج 🚪</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+            <a href="parent-tasks.html" class="action-btn" style="text-decoration: none; background-color: #2ecc71; color: white; padding: 12px 25px; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" data-i18n="parent_tasks_btn">المهام والواجبات 🎯</a>
+            <a href="parent-appointments.html" class="action-btn" style="text-decoration: none; background-color: #f39c12; color: white; padding: 12px 25px; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" data-i18n="parent_appointments_btn">مواعيد الجلسات 📅</a>
+            <a href="parent-chat.html" class="action-btn" style="text-decoration: none; background-color: #3498db; color: white; padding: 12px 25px; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" data-i18n="parent_chat_btn">رسائل الأخصائي 💬</a>
+        </div>
+
+        <section class="sentence-builder">
+            <div class="sentence-box" id="sentenceBox">
+                <p class="placeholder-text" id="sentencePlaceholder" data-i18n="sentence_placeholder">اضغط على الكروت لتكوين جملة...</p>
+            </div>
+            <div class="sentence-actions">
+                <button class="action-btn play-btn" id="playSentenceBtn" data-i18n="play_btn">🔊 انطق الجملة</button>
+                <button class="action-btn mic-btn" id="micSentenceBtn" data-i18n="mic_btn">🎤 جرب بصوتك</button>
+                <button class="action-btn clear-btn" id="clearSentenceBtn" data-i18n="clear_btn">🗑️ مسح</button>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <h2 class="section-title" id="sectionTitle" data-i18n="hero_title">اختار التصنيف 📚</h2>
+            <div class="categories-grid" id="categoriesGrid"></div>
+        </section>
+    </main>
+
+    <div id="addWordModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 data-i18n="add_word_title">إضافة كارت جديد ✨</h2>
+            <form id="addWordForm">
+                <div class="input-group">
+                    <label data-i18n="select_category">التصنيف</label>
+                    <select id="wordCategory" required></select> </div>
+                
+                <div id="newCategoryFields" style="display:none; background:rgba(0,0,0,0.05); padding:15px; border-radius:10px; margin-bottom:15px; border: 1px dashed var(--primary-color);">
+                    <div class="input-group">
+                        <label data-i18n="new_cat_name_ar">اسم التصنيف الجديد (عربي)</label>
+                        <input type="text" id="newCatAr">
+                    </div>
+                    <div class="input-group">
+                        <label data-i18n="new_cat_name_en">اسم التصنيف الجديد (إنجليزي)</label>
+                        <input type="text" id="newCatEn">
+                    </div>
+                    <div class="input-group">
+                        <label data-i18n="new_cat_img">صورة التصنيف (رابط)</label>
+                        <input type="url" id="newCatImg">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label data-i18n="word_ar_label">الكلمة أو الجملة (عربي)</label>
+                    <input type="text" id="wordAr" required placeholder="مثال: سيارة / أنا أريد سيارة">
+                </div>
+                <div class="input-group">
+                    <label data-i18n="word_en_label">الكلمة أو الجملة (إنجليزي)</label>
+                    <input type="text" id="wordEn" required placeholder="مثال: Car / I want a car">
+                </div>
+                <div class="input-group">
+                    <label data-i18n="img_label">رابط الصورة</label>
+                    <input type="url" id="wordImage" required placeholder="مثال: https://images.unsplash.com/...">
+                </div>
+                <button type="submit" class="primary-btn" data-i18n="save_word_btn">حفظ الكارت في النظام</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/data.js"></script> 
+    <script src="js/sentence.js"></script> 
+    <script src="js/parent.js"></script>
+</body>
+</html>

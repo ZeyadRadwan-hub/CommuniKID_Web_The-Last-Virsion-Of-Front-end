@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المهام | CommuniKID Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/therapist.css">
+    <style>
+        .task-creator { background: var(--card-bg); border-radius: 20px; padding: 30px; border: 1px solid var(--border-color); margin-bottom: 30px; }
+        .task-list-item { background: var(--card-bg); border-radius: 15px; padding: 20px; margin-bottom: 15px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+        .task-status { padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+        .status-pending { background: #f1c40f; color: #333; }
+        .status-completed { background: #2ecc71; color: #fff; }
+    </style>
+</head>
+<body class="app-body">
+
+    <div class="global-controls">
+        <button id="themeToggle" class="control-btn">🌙</button>
+        <button id="langToggle" class="control-btn">EN</button>
+    </div>
+
+    <nav class="therapist-navbar">
+        <div style="color: #fff; font-size: 1.5rem; font-weight: bold;">CommuniKID <span style="color: #3498db;">Pro</span></div>
+        <div class="nav-links">
+            <a href="therapist-home.html">الرئيسية</a>
+            <a href="therapist-patients.html">مرضاي</a>
+            <a href="therapist-tasks.html" class="active">المهام</a>
+            <a href="therapist-chat.html">الرسائل</a>
+            <a href="therapist-appointments.html">المواعيد</a>
+        </div>
+        <button id="logoutBtn" class="danger-btn">خروج 🚪</button>
+    </nav>
+
+    <main class="main-content" style="max-width: 900px;">
+        <header style="margin-bottom: 30px;">
+            <h1>إسناد مهام جديدة 📝</h1>
+            <p>حدد التدريبات المطلوبة من الأبطال لتنفيذها في المنزل.</p>
+        </header>
+
+        <section class="task-creator">
+            <form id="sendTaskForm">
+                <div class="input-group">
+                    <label>اختار البطل</label>
+                    <select id="targetPatient" required>
+                        <option value="زياد رضوان">زياد رضوان</option>
+                        <option value="سارة أحمد">سارة أحمد</option>
+                        <option value="علي محمود">علي محمود</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>نوع المهمة</label>
+                    <select id="taskType">
+                        <option value="تدريب على تصنيف">تدريب على تصنيف كامل</option>
+                        <option value="تكوين جملة">تكوين جملة معينة</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>محتوى المهمة (التصنيف أو الجملة)</label>
+                    <input type="text" id="taskContent" placeholder="مثال: تصنيف الحيوانات أو 'أنا أريد تفاحة'" required>
+                </div>
+                <button type="submit" class="primary-btn">إرسال المهمة الآن 🚀</button>
+            </form>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 20px; color: var(--text-color);">المهام الحالية 📋</h2>
+            <div id="tasksContainer">
+                </div>
+        </section>
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/therapist-tasks.js"></script>
+</body>
+</html>

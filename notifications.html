@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام التنبيهات | CommuniKID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings-pages.css">
+</head>
+<body class="app-body settings-page">
+    <div class="global-controls"><button id="themeToggle" class="control-btn">🌙</button><button id="langToggle" class="control-btn">EN</button></div>
+    <header class="settings-header" style="margin-top: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <h1><span data-i18n="notifications_title">نظام التنبيهات 🔔</span><br><span style="font-size: 0.9rem; font-weight: normal; opacity: 0.7;" data-i18n="notifications_sub">إدارة إشعارات الجلسات</span></h1>
+        <a href="settings.html" class="control-btn" style="text-decoration: none;" data-i18n="back">⬅️ رجوع</a>
+    </header>
+    <div class="auth-container" style="margin: 0 auto; max-width: 600px;">
+        <div class="auth-box">
+            <div class="setting-row">
+                <div class="setting-info"><h3 data-i18n="notif_daily_title">تذكير الجلسات اليومي</h3><p data-i18n="notif_daily_desc">تنبيه بموعد تدريب البطل</p></div>
+                <label class="switch"><input type="checkbox" id="notifDaily" checked><span class="slider"></span></label>
+            </div>
+            <div class="setting-row">
+                <div class="setting-info"><h3 data-i18n="notif_reports_title">تقارير التقدم</h3><p data-i18n="notif_reports_desc">إرسال تقرير أسبوعي بالمستوى</p></div>
+                <label class="switch"><input type="checkbox" id="notifReports" checked><span class="slider"></span></label>
+            </div>
+            <div class="setting-row">
+                <div class="setting-info"><h3 data-i18n="notif_market_title">تحديثات الماركت</h3><p data-i18n="notif_market_desc">إشعار عند إضافة ملابس جديدة</p></div>
+                <label class="switch"><input type="checkbox" id="notifUpdates"><span class="slider"></span></label>
+            </div>
+            <button id="saveNotifBtn" class="primary-btn" style="margin-top: 20px;" data-i18n="save_preferences_btn">حفظ التفضيلات ✅</button>
+        </div>
+    </div>
+    <script src="js/global.js"></script><script src="js/notifications.js"></script>
+</body>
+</html>
