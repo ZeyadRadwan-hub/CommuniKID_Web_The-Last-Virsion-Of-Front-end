@@ -18,51 +18,51 @@
     <nav class="therapist-navbar">
         <div style="color: #fff; font-size: 1.5rem; font-weight: bold;">CommuniKID <span style="color: #3498db;">Pro</span></div>
         <div class="nav-links">
-            <a href="therapist-home.html">الرئيسية</a>
-            <a href="therapist-patients.html">مرضاي</a>
-            <a href="therapist-tasks.html">المهام</a>
-            <a href="therapist-chat.html">الرسائل</a>
-            <a href="therapist-appointments.html">المواعيد</a>
-            <a href="therapist-settings.html" class="active">الإعدادات</a> 
+            <a href="therapist-home.html" data-i18n="nav_home">الرئيسية</a>
+            <a href="therapist-patients.html" data-i18n="nav_patients">مرضاي</a>
+            <a href="therapist-tasks.html" data-i18n="nav_tasks">المهام</a>
+            <a href="therapist-chat.html" data-i18n="nav_messages">الرسائل</a>
+            <a href="therapist-appointments.html" data-i18n="nav_appointments">المواعيد</a>
+            <a href="therapist-settings.html" class="active" data-i18n="settings">الإعدادات</a> 
         </div>
-        <button id="logoutBtn" class="danger-btn">خروج 🚪</button>
+        <button id="logoutBtn" class="danger-btn" data-i18n="logout">خروج 🚪</button>
     </nav>
 
     <main class="main-content" style="max-width: 800px;">
         <header style="margin-bottom: 30px;">
-            <h1>إعدادات الحساب الشخصي ⚙️</h1>
-            <p>تحديث بياناتك المهنية وكلمة المرور</p>
+            <h1 data-i18n="doc_settings_title">إعدادات الحساب الشخصي ⚙️</h1>
+            <p data-i18n="doc_settings_sub">تحديث بياناتك المهنية وكلمة المرور</p>
         </header>
 
-        <div class="auth-box" style="width: 100%; max-width: none;">
+        <div class="auth-box" style="width: 100%; max-width: none; background: var(--card-bg); padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
             <div class="input-group" style="background: var(--bg-color); padding: 20px; border-radius: 10px; margin-bottom: 25px; border: 2px dashed #3498db;">
-                <label style="color: #3498db; font-weight: bold; font-size: 1.1rem;">🔑 كود الأخصائي الخاص بك</label>
-                <p style="font-size: 0.85rem; color: #888; margin-bottom: 10px;">أرسل هذا الكود لأولياء الأمور لربط حساباتهم بك لتتمكن من إرسال المهام والمواعيد لهم.</p>
+                <label style="color: #3498db; font-weight: bold; font-size: 1.1rem;" data-i18n="your_doc_code">🔑 كود الأخصائي الخاص بك</label>
+                <p style="font-size: 0.85rem; color: #888; margin-bottom: 10px;" data-i18n="doc_code_help">أرسل هذا الكود لأولياء الأمور لربط حساباتهم بك.</p>
                 <div style="display: flex; gap: 10px;">
                     <input type="text" id="docCodeDisplay" disabled style="opacity: 1; background: var(--card-bg); font-weight: bold; font-size: 1.2rem; text-align: center; color: var(--text-color); cursor: default;">
-                    <button type="button" id="copyCodeBtn" class="action-btn" style="background: #3498db; color: white; width: 120px; font-weight: bold;">نسخ الكود</button>
+                    <button type="button" id="copyCodeBtn" class="action-btn" style="background: #3498db; color: white; width: 120px; font-weight: bold;" data-i18n="copy_code_btn">نسخ الكود</button>
                 </div>
             </div>
 
             <form id="doctorSettingsForm">
                 <div class="input-group">
-                    <label>الاسم المهني</label>
+                    <label data-i18n="prof_name_label">الاسم المهني</label>
                     <input type="text" id="docName" required>
                 </div>
                 <div class="input-group">
-                    <label>التخصص</label>
+                    <label data-i18n="specialty_label_settings">التخصص</label>
                     <input type="text" id="docSpecialty" required>
                 </div>
                 <div class="input-group">
-                    <label>البريد الإلكتروني (لا يمكن تغييره)</label>
+                    <label data-i18n="email_no_change">البريد الإلكتروني (لا يمكن تغييره)</label>
                     <input type="email" id="docEmail" disabled style="opacity: 0.6; cursor: not-allowed;">
                 </div>
                 <hr style="margin: 20px 0; border: 0; border-top: 1px dashed var(--border-color);">
                 <div class="input-group">
-                    <label>كلمة المرور الجديدة (اتركها فارغة إذا لم ترد التغيير)</label>
+                    <label data-i18n="new_pass_label">كلمة المرور الجديدة</label>
                     <input type="password" id="docPass">
                 </div>
-                <button type="submit" class="primary-btn">حفظ التغييرات ✅</button>
+                <button type="submit" class="primary-btn" data-i18n="save_settings_btn">حفظ التغييرات ✅</button>
             </form>
         </div>
     </main>

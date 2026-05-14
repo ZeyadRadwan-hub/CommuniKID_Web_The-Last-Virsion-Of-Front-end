@@ -32,8 +32,29 @@ const translations = {
         new_cat_name_ar: "اسم التصنيف الجديد (عربي)", new_cat_name_en: "اسم التصنيف الجديد (إنجليزي)", new_cat_img: "صورة التصنيف (رابط)",
         word_ar_label: "الكلمة أو الجملة (عربي)", word_en_label: "الكلمة أو الجملة (إنجليزي)", img_label: "رابط الصورة",
         save_word_btn: "حفظ الكارت في النظام",
-        // إضافات باقة Premium Basic 
-        plan_basic_title: "CommuniKID الأساسي 🥉", plan_basic_desc: "تجربة خالية من الإعلانات", feat_basic_1: "✔️ إزالة الإعلانات المزعجة", feat_basic_2: "✔️ سرعة أعلى في التحميل", feat_basic_3: "✔️ دعم فني سريع", btn_basic_price: "اشترك بـ 4.99$ / شهر"
+        plan_basic_title: "CommuniKID الأساسي 🥉", plan_basic_desc: "تجربة خالية من الإعلانات", feat_basic_1: "✔️ إزالة الإعلانات المزعجة", feat_basic_2: "✔️ سرعة أعلى في التحميل", feat_basic_3: "✔️ دعم فني سريع", btn_basic_price: "اشترك بـ 4.99$ / شهر",
+
+        // --- إضافات الأخصائي الجديدة ---
+        therapist_tasks_title: "إسناد مهام جديدة 📝",
+        therapist_tasks_sub: "حدد التدريبات المطلوبة من الأبطال لتنفيذها في المنزل.",
+        choose_hero: "اختار البطل",
+        task_type_label: "نوع المهمة",
+        task_full_cat: "تدريب على تصنيف كامل",
+        task_sentence: "تكوين جملة معينة",
+        task_content_label: "محتوى المهمة (التصنيف أو الجملة)",
+        task_content_placeholder: "مثال: تصنيف الحيوانات أو 'أنا أريد تفاحة'",
+        send_task_btn: "إرسال المهمة الآن 🚀",
+        current_tasks_title: "المهام الحالية 📋",
+        doc_settings_title: "إعدادات الحساب الشخصي ⚙️",
+        doc_settings_sub: "تحديث بياناتك المهنية وكلمة المرور",
+        your_doc_code: "🔑 كود الأخصائي الخاص بك",
+        doc_code_help: "أرسل هذا الكود لأولياء الأمور لربط حساباتهم بك.",
+        copy_code_btn: "نسخ الكود",
+        prof_name_label: "الاسم المهني",
+        specialty_label_settings: "التخصص",
+        email_no_change: "البريد الإلكتروني (لا يمكن تغييره)",
+        new_pass_label: "كلمة المرور الجديدة (اتركها فارغة إذا لم ترد التغيير)",
+        save_settings_btn: "حفظ التغييرات ✅"
     },
     en: {
         welcome_title_login: "CommuniKID 🚀", welcome_subtitle_login: "Welcome back, Hero!", login_btn: "Quick Login", new_user: "First time here?", create_account_link: "Create a new account",
@@ -65,8 +86,29 @@ const translations = {
         new_cat_name_ar: "New Category Name (Ar)", new_cat_name_en: "New Category Name (En)", new_cat_img: "Category Image URL",
         word_ar_label: "Word / Sentence (Arabic)", word_en_label: "Word / Sentence (English)", img_label: "Image URL",
         save_word_btn: "Save Card",
-        // إضافات باقة Premium Basic 
-        plan_basic_title: "CommuniKID Basic 🥉", plan_basic_desc: "Ad-free experience", feat_basic_1: "✔️ Remove all ads", feat_basic_2: "✔️ Faster loading", feat_basic_3: "✔️ Priority support", btn_basic_price: "Subscribe for $4.99 / mo"
+        plan_basic_title: "CommuniKID Basic 🥉", plan_basic_desc: "Ad-free experience", feat_basic_1: "✔️ Remove all ads", feat_basic_2: "✔️ Faster loading", feat_basic_3: "✔️ Priority support", btn_basic_price: "Subscribe for $4.99 / mo",
+
+        // --- New Therapist Additions ---
+        therapist_tasks_title: "Assign New Tasks 📝",
+        therapist_tasks_sub: "Define home training exercises for our heroes.",
+        choose_hero: "Choose Hero",
+        task_type_label: "Task Type",
+        task_full_cat: "Train on full category",
+        task_sentence: "Build specific sentence",
+        task_content_label: "Task Content (Category or Sentence)",
+        task_content_placeholder: "e.g., Animals category or 'I want apple'",
+        send_task_btn: "Send Task Now 🚀",
+        current_tasks_title: "Current Tasks 📋",
+        doc_settings_title: "Profile Settings ⚙️",
+        doc_settings_sub: "Update professional info and password",
+        your_doc_code: "🔑 Your Specialist Code",
+        doc_code_help: "Share this code with parents to link their accounts.",
+        copy_code_btn: "Copy Code",
+        prof_name_label: "Professional Name",
+        specialty_label_settings: "Specialty",
+        email_no_change: "Email Address (Cannot be changed)",
+        new_pass_label: "New Password (Leave empty to keep current)",
+        save_settings_btn: "Save Changes ✅"
     }
 };
 
