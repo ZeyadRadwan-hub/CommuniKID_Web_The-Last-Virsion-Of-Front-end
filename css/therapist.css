@@ -6,7 +6,7 @@
     background-color: var(--secondary-color);
     padding: 15px 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin: 20px auto 30px;
     max-width: 1200px;
     display: flex;
@@ -45,14 +45,19 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
     border-right: 5px solid #3498db;
 }
 
-[dir="ltr"] .d-stat-card { border-right: none; border-left: 5px solid #3498db; }
+[dir="ltr"] .d-stat-card {
+    border-right: none;
+    border-left: 5px solid #3498db;
+}
 
-.d-stat-card:hover { transform: translateY(-5px); }
+.d-stat-card:hover {
+    transform: translateY(-5px);
+}
 
 .d-stat-icon {
     width: 60px;
@@ -67,8 +72,17 @@
     flex-shrink: 0;
 }
 
-.d-stat-info h3 { margin: 0; font-size: 2rem; color: var(--text-color); }
-.d-stat-info p { margin: 0; color: #888; font-weight: bold; }
+.d-stat-info h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.d-stat-info p {
+    margin: 0;
+    color: #888;
+    font-weight: bold;
+}
 
 .dashboard-sections {
     display: grid;
@@ -81,7 +95,8 @@
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 25px;
-    overflow-x: auto; /* مهم عشان الجدول ميبوظش الموبايل */
+    overflow-x: auto;
+    /* مهم عشان الجدول ميبوظش الموبايل */
 }
 
 .d-panel h2 {
@@ -93,28 +108,99 @@
 }
 
 /* جدول الحالات السريع */
-.d-table { width: 100%; border-collapse: collapse; min-width: 500px; }
-.d-table th, .d-table td { padding: 15px; text-align: right; border-bottom: 1px solid var(--border-color); color: var(--text-color); }
-[dir="ltr"] .d-table th, [dir="ltr"] .d-table td { text-align: left; }
-.d-table th { color: #888; font-weight: bold; }
-.d-table tr:hover { background: var(--bg-color); }
+.d-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
 
-.status-badge { padding: 5px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: bold; white-space: nowrap; }
-.status-good { background: rgba(46, 204, 113, 0.2); color: #27ae60; }
-.status-warning { background: rgba(241, 196, 15, 0.2); color: #f39c12; }
-.status-danger { background: rgba(231, 76, 60, 0.2); color: #e74c3c; }
+.d-table th,
+.d-table td {
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+[dir="ltr"] .d-table th,
+[dir="ltr"] .d-table td {
+    text-align: left;
+}
+
+.d-table th {
+    color: #888;
+    font-weight: bold;
+}
+
+.d-table tr:hover {
+    background: var(--bg-color);
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.status-good {
+    background: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+}
+
+.status-warning {
+    background: rgba(241, 196, 15, 0.2);
+    color: #f39c12;
+}
+
+.status-danger {
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+}
 
 /* تجاوب مع الموبايل (Responsive) */
 @media screen and (max-width: 900px) {
-    .dashboard-sections { grid-template-columns: 1fr; }
-    .therapist-navbar { flex-direction: column; gap: 15px; margin-top: 60px; text-align: center; }
-    .therapist-navbar .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .therapist-navbar .nav-links a { margin: 5px; }
-    #logoutBtn { width: 100%; margin-top: 10px; }
+    .dashboard-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .therapist-navbar {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .therapist-navbar .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .therapist-navbar .nav-links a {
+        margin: 5px;
+    }
+
+    #logoutBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .d-stat-card { padding: 15px; }
-    .d-stat-icon { width: 50px; height: 50px; font-size: 1.5rem; }
-    .d-stat-info h3 { font-size: 1.5rem; }
+    .d-stat-card {
+        padding: 15px;
+    }
+
+    .d-stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .d-stat-info h3 {
+        font-size: 1.5rem;
+    }
 }

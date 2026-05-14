@@ -1,22 +1,122 @@
-.patients-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px; }
-.patients-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-.patient-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
-.patient-card:hover { transform: translateY(-5px); border-color: #3498db; }
-.p-card-top { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-.p-avatar { width: 60px; height: 60px; background: #eee; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; border: 2px solid var(--primary-color); flex-shrink: 0;}
-.p-info h3 { margin: 0; color: var(--text-color); }
-.p-info p { margin: 0; font-size: 0.85rem; color: #888; }
-.p-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: var(--bg-color); border-radius: 10px; padding: 10px; margin-bottom: 15px; }
-.p-stat-item { text-align: center; }
-.p-stat-item span { display: block; font-size: 0.75rem; color: #888; }
-.p-stat-item strong { color: var(--text-color); font-size: 1rem; word-break: break-all;}
-.p-actions { display: flex; gap: 10px; }
-.p-btn { flex: 1; padding: 10px; border-radius: 10px; border: none; cursor: pointer; font-weight: bold; font-family: 'Cairo'; transition: 0.3s; }
-.btn-task { background: #f1c40f; color: #333; }
+.patients-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.patients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.patient-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.patient-card:hover {
+    transform: translateY(-5px);
+    border-color: #3498db;
+}
+
+.p-card-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.p-avatar {
+    width: 60px;
+    height: 60px;
+    background: #eee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 2px solid var(--primary-color);
+    flex-shrink: 0;
+}
+
+.p-info h3 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.p-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.p-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.p-stat-item {
+    text-align: center;
+}
+
+.p-stat-item span {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.p-stat-item strong {
+    color: var(--text-color);
+    font-size: 1rem;
+    word-break: break-all;
+}
+
+.p-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.p-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Cairo';
+    transition: 0.3s;
+}
+
+.btn-task {
+    background: #f1c40f;
+    color: #333;
+}
 
 /* تجاوب مع الموبايل (Responsive) */
 @media screen and (max-width: 768px) {
-    .patients-header { flex-direction: column; text-align: center; }
-    .patients-header button { width: 100% !important; }
-    .patients-grid { grid-template-columns: 1fr; }
+    .patients-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .patients-header button {
+        width: 100% !important;
+    }
+
+    .patients-grid {
+        grid-template-columns: 1fr;
+    }
 }

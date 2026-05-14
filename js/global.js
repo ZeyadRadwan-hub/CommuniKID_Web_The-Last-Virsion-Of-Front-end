@@ -33,28 +33,20 @@ const translations = {
         word_ar_label: "الكلمة أو الجملة (عربي)", word_en_label: "الكلمة أو الجملة (إنجليزي)", img_label: "رابط الصورة",
         save_word_btn: "حفظ الكارت في النظام",
         plan_basic_title: "CommuniKID الأساسي 🥉", plan_basic_desc: "تجربة خالية من الإعلانات", feat_basic_1: "✔️ إزالة الإعلانات المزعجة", feat_basic_2: "✔️ سرعة أعلى في التحميل", feat_basic_3: "✔️ دعم فني سريع", btn_basic_price: "اشترك بـ 4.99$ / شهر",
+        therapist_tasks_title: "إسناد مهام جديدة 📝", therapist_tasks_sub: "حدد التدريبات المطلوبة من الأبطال لتنفيذها في المنزل.", choose_hero: "اختار البطل", task_type_label: "نوع المهمة", task_full_cat: "تدريب على تصنيف كامل", task_sentence: "تكوين جملة معينة", task_content_label: "محتوى المهمة (التصنيف أو الجملة)", task_content_placeholder: "مثال: تصنيف الحيوانات أو 'أنا أريد تفاحة'", send_task_btn: "إرسال المهمة الآن 🚀", current_tasks_title: "المهام الحالية 📋", doc_settings_title: "إعدادات الحساب الشخصي ⚙️", doc_settings_sub: "تحديث بياناتك المهنية وكلمة المرور", your_doc_code: "🔑 كود الأخصائي الخاص بك", doc_code_help: "أرسل هذا الكود لأولياء الأمور لربط حساباتهم بك.", copy_code_btn: "نسخ الكود", prof_name_label: "الاسم المهني", specialty_label_settings: "التخصص", email_no_change: "البريد الإلكتروني (لا يمكن تغييره)", new_pass_label: "كلمة المرور الجديدة (اتركها فارغة إذا لم ترد التغيير)", save_settings_btn: "حفظ التغييرات ✅",
 
-        // --- إضافات الأخصائي الجديدة ---
-        therapist_tasks_title: "إسناد مهام جديدة 📝",
-        therapist_tasks_sub: "حدد التدريبات المطلوبة من الأبطال لتنفيذها في المنزل.",
-        choose_hero: "اختار البطل",
-        task_type_label: "نوع المهمة",
-        task_full_cat: "تدريب على تصنيف كامل",
-        task_sentence: "تكوين جملة معينة",
-        task_content_label: "محتوى المهمة (التصنيف أو الجملة)",
-        task_content_placeholder: "مثال: تصنيف الحيوانات أو 'أنا أريد تفاحة'",
-        send_task_btn: "إرسال المهمة الآن 🚀",
-        current_tasks_title: "المهام الحالية 📋",
-        doc_settings_title: "إعدادات الحساب الشخصي ⚙️",
-        doc_settings_sub: "تحديث بياناتك المهنية وكلمة المرور",
-        your_doc_code: "🔑 كود الأخصائي الخاص بك",
-        doc_code_help: "أرسل هذا الكود لأولياء الأمور لربط حساباتهم بك.",
-        copy_code_btn: "نسخ الكود",
-        prof_name_label: "الاسم المهني",
-        specialty_label_settings: "التخصص",
-        email_no_change: "البريد الإلكتروني (لا يمكن تغييره)",
-        new_pass_label: "كلمة المرور الجديدة (اتركها فارغة إذا لم ترد التغيير)",
-        save_settings_btn: "حفظ التغييرات ✅"
+        // --- نصوص دليل الاستخدام (Onboarding) ---
+        btn_exit: "خروج ✖", btn_prev: "السابق ⬅️", btn_next: "التالي ➡️", btn_finish: "إنهاء ✅",
+        info_title_1: "الصفحة الرئيسية", info_desc_1: "أهلاً بك! دي الصفحة الرئيسية، أو نقطة البداية. فوق على اليمين هتلاقي اسم طفلك وعدد 'النقاط' اللي كسبها. في النص، هتلاقي مربعات كبيرة فيها صور زي 'حيوانات' أو 'أكل'. لو دوست بصباعك على أي مربع، هيفتحلك كلمات جواه. وفوقهم هتلاقي زراير ملونة عشان تروح لأي مكان في الموقع بسهولة.",
+        info_title_2: "داخل التصنيفات", info_desc_2: "هنا إحنا جوه قسم (الحيوانات). هتلاقي صور كتير، لو دوست على صورة 'أسد'، هتنزل في المستطيل الغامق اللي فوق. تقدر تختار كذا صورة عشان تعمل 'جملة'. الزرار الأخضر بيخلي التليفون ينطق الجملة، والزرار الأزرق بيخلي الطفل يجرب ينطقها بصوته عشان يكسب نقط! ولو عجبتك صورة، دوس على 'القلب' الصغير اللي فوقها.",
+        info_title_3: "إضافة كلمة جديدة", info_desc_3: "لو حبيت تزود كلمة أو صورة معينة مش موجودة في الموقع، بتدوس على زرار 'إضافة كارت'. هتفتحلك الشاشة دي، بتكتب فيها الكلمة بالعربي وبالإنجليزي، وتحط رابط للصورة بتاعتها من على النت. بعدين تدوس 'حفظ'، والكلمة دي هتبقى موجودة دايماً لطفلك.",
+        info_title_4: "الماركت والملابس", info_desc_4: "دي الخزانة أو 'الماركت'. فاكر النقاط اللي طفلك كسبها لما نطق صح؟ هنا يقدر يستخدمها عشان يشتري تيشرتات، طواقي، ونظارات للشخصية بتاعته. الفكرة دي معمولة مخصوص عشان تشجع الطفل يتكلم أكتر وتكون مكافأة ليه.",
+        info_title_5: "المفضلة", info_desc_5: "دي صفحة 'المفضلة'. فاكر 'القلب' اللي أضفناه للصور في الخطوة التانية؟ أي صورة أو جملة بتعلم عليها بالقلب، بتيجي تتجمع هنا أوتوماتيك. ده بيسهل عليك توصل للكلمات اللي طفلك بيحبها بسرعة جداً من غير ما تدور عليها.",
+        info_title_6: "المهام والواجبات", info_desc_6: "دي صفحة 'المهام'. هنا الدكتور المعالج بيبعتلك 'واجبات' تعملها مع الطفل في البيت (مثلاً: درب الطفل على كلمات الأكل). بعد ما تخلص التدريب مع طفلك، بتتعلم بعلامة صح إنها خلصت، عشان الدكتور يتابع معاك أول بأول.",
+        info_title_7: "تقارير التقدم", info_desc_7: "دي صفحة 'التقارير'. من هنا بتقدر تشوف بعينك طفلك بيتحسن ولا لأ. فيها رسم بياني بسيط بيوريك عدد الكلمات اللي اتعلمها، وكمان الذكاء الاصطناعي بيكتبلك نصيحة بسيطة بيقولك تركز على إيه الأسبوع الجاي.",
+        info_title_8: "المحادثات", info_desc_8: "دي صفحة 'الرسائل'. لو احتجت تسأل الدكتور عن أي حاجة، بتدخل هنا وتكتب رسالتك وتدوس إرسال. الدكتور هيشوفها ويرد عليك في نفس المكان. هي شبه برنامج الواتساب بالظبط.",
+        info_title_9: "المواعيد", info_desc_9: "دي صفحة 'المواعيد'. عشان متنساش مواعيد الجلسات، الأجندة دي بتسجل كل جلساتك مع الدكتور. هيقولك الجلسة الجاية يوم إيه، الساعة كام، وهل هي في عيادة الدكتور ولا على النت من البيت.",
+        info_title_10: "الإعدادات", info_desc_10: "وأخيراً، دي صفحة 'الإعدادات'. دي غرفة التحكم الخاصة بيك. تقدر منها تعدل اسم الطفل وعمره، أو تغير كلمة السر بتاعتك عشان تحمي الحساب، ومنها تقدر تسجل 'خروج' لما تخلص استخدام الموقع."
     },
     en: {
         welcome_title_login: "CommuniKID 🚀", welcome_subtitle_login: "Welcome back, Hero!", login_btn: "Quick Login", new_user: "First time here?", create_account_link: "Create a new account",
@@ -87,28 +79,20 @@ const translations = {
         word_ar_label: "Word / Sentence (Arabic)", word_en_label: "Word / Sentence (English)", img_label: "Image URL",
         save_word_btn: "Save Card",
         plan_basic_title: "CommuniKID Basic 🥉", plan_basic_desc: "Ad-free experience", feat_basic_1: "✔️ Remove all ads", feat_basic_2: "✔️ Faster loading", feat_basic_3: "✔️ Priority support", btn_basic_price: "Subscribe for $4.99 / mo",
+        therapist_tasks_title: "Assign New Tasks 📝", therapist_tasks_sub: "Define home training exercises for our heroes.", choose_hero: "Choose Hero", task_type_label: "Task Type", task_full_cat: "Train on full category", task_sentence: "Build specific sentence", task_content_label: "Task Content (Category or Sentence)", task_content_placeholder: "e.g., Animals category or 'I want apple'", send_task_btn: "Send Task Now 🚀", current_tasks_title: "Current Tasks 📋", doc_settings_title: "Profile Settings ⚙️", doc_settings_sub: "Update professional info and password", your_doc_code: "🔑 Your Specialist Code", doc_code_help: "Share this code with parents to link their accounts.", copy_code_btn: "Copy Code", prof_name_label: "Professional Name", specialty_label_settings: "Specialty", email_no_change: "Email Address (Cannot be changed)", new_pass_label: "New Password (Leave empty to keep current)", save_settings_btn: "Save Changes ✅",
 
-        // --- New Therapist Additions ---
-        therapist_tasks_title: "Assign New Tasks 📝",
-        therapist_tasks_sub: "Define home training exercises for our heroes.",
-        choose_hero: "Choose Hero",
-        task_type_label: "Task Type",
-        task_full_cat: "Train on full category",
-        task_sentence: "Build specific sentence",
-        task_content_label: "Task Content (Category or Sentence)",
-        task_content_placeholder: "e.g., Animals category or 'I want apple'",
-        send_task_btn: "Send Task Now 🚀",
-        current_tasks_title: "Current Tasks 📋",
-        doc_settings_title: "Profile Settings ⚙️",
-        doc_settings_sub: "Update professional info and password",
-        your_doc_code: "🔑 Your Specialist Code",
-        doc_code_help: "Share this code with parents to link their accounts.",
-        copy_code_btn: "Copy Code",
-        prof_name_label: "Professional Name",
-        specialty_label_settings: "Specialty",
-        email_no_change: "Email Address (Cannot be changed)",
-        new_pass_label: "New Password (Leave empty to keep current)",
-        save_settings_btn: "Save Changes ✅"
+        // --- Onboarding Text ---
+        btn_exit: "Exit ✖", btn_prev: "⬅️ Prev", btn_next: "Next ➡️", btn_finish: "Finish ✅",
+        info_title_1: "Home Page", info_desc_1: "Welcome! This is the Home Page, your starting point. At the top right, you'll see your child's name and their earned 'Points'. In the middle, there are big boxes with pictures like 'Animals' or 'Food'. Tapping any box opens words inside it. Above them, colorful buttons help you easily navigate anywhere in the website.",
+        info_title_2: "Inside Categories", info_desc_2: "Here we are inside the 'Animals' section. You'll see many pictures. If you tap the 'Lion', it moves to the dark box above. You can tap several pictures to build a 'sentence'. The green button makes the device speak the sentence, and the blue button lets your child try saying it to win points! If you like a picture, tap the small 'Heart' above it.",
+        info_title_3: "Add New Word", info_desc_3: "If you want to add a specific word or picture not found in the website, click the 'Add Card' button. This screen opens, allowing you to type the word in Arabic and English, and paste an image link from the internet. Click 'Save', and this word will always be available for your child.",
+        info_title_4: "Market & Clothes", info_desc_4: "This is the Wardrobe or 'Market'. Remember the points your child earned for speaking correctly? Here, they can use them to buy shirts, hats, and glasses for their character. This is specially designed to encourage your child to speak more as a fun reward.",
+        info_title_5: "Favorites", info_desc_5: "This is the 'Favorites' page. Remember the 'Heart' we tapped on pictures earlier? Any picture or sentence you mark with a heart automatically gathers here. This makes it super fast to find the words your child loves without searching for them.",
+        info_title_6: "Tasks & Duties", info_desc_6: "This is the 'Tasks' page. Here, the therapist sends you 'homework' to practice with your child at home (e.g., practice food words). Once you finish practicing, it gets marked with a checkmark as completed, so the doctor can track your progress.",
+        info_title_7: "Progress Reports", info_desc_7: "This is the 'Progress' page. Here you can see with your own eyes if your child is improving. It has a simple graph showing the number of words learned, and our AI writes a simple tip telling you what to focus on next week.",
+        info_title_8: "Chats", info_desc_8: "This is the 'Messages' page. If you need to ask the doctor anything, you come here, type your message, and click send. The doctor will see it and reply right here. It works exactly like WhatsApp.",
+        info_title_9: "Appointments", info_desc_9: "This is the 'Appointments' page. So you never forget a session, this agenda records all your appointments with the doctor. It tells you the date, time, and whether the session is at the clinic or online from home.",
+        info_title_10: "Settings", info_desc_10: "Finally, the 'Settings' page. This is your control room. You can edit your child's name and age, change your password to protect the account, and safely 'Logout' when you are done using the website."
     }
 };
 
@@ -140,6 +124,7 @@ function applyLanguage(lang) {
     if (window.renderWords) window.renderWords();
     if (window.populateCategorySelect) window.populateCategorySelect();
     if (window.renderAllCards) window.renderAllCards();
+    if (window.updateInfoModal) window.updateInfoModal(); // لتحديث لغة دليل الاستخدام لو مفتوح
 }
 
 if (langToggleBtn) {
